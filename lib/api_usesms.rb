@@ -27,7 +27,7 @@ module UseSms
 		token ||= self.token
 		msg = URI.escape(msg)		
 		if rest			
-			uri = URI("http://usesms.net.br/api/envia_sms/#{token}/#{{phone}}/#{msg}")
+			uri = URI("http://usesms.net.br/api/envia_sms/#{token}/#{phone}/#{msg}")
 		else
 			uri = URI("http://usesms.net.br/api/envia_sms?id_sessao=#{token}&telefone=#{phone}&mensagem=#{msg}")
 		end
