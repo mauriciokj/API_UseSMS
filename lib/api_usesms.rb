@@ -23,11 +23,14 @@ module UseSms
   end
 
 
-  def self.send(phone,msg)
-		token = self.token
-		msg = URI.escape(msg)
-		uri = URI("http://usesms.net.br/api/envia_sms/#{token}/#{phone}/#{msg}")
-  	puts uri
+  def self.send(phone,msg,token = nil,rest = false)
+		token ||= self.token
+		msg = URI.escape(msg)		
+		if rest			
+			uri = URI("http://usesms.net.br/api/envia_sms/#{token}/#{{phone}}/#{msg}")
+		else
+			uri = URI("http://usesms.net.br/api/envia_sms?id_sessao=#{token}&telefone=#{phone}&mensagem=#{msg}")
+		end
 		Net::HTTP.get(uri) 
 	end
 
