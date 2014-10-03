@@ -4,7 +4,7 @@ Esta GEM foi criada para auxiliar os desenvolvedores a utilizar a API externa do
 http://usesms.net.br
 
 ```ruby
-gem 'API_UseSMS', '1.0.2', :git => 'git://github.com/mauriciokj/API_UseSMS.git'
+gem 'API_UseSMS', :git => 'git://github.com/mauriciokj/API_UseSMS.git'
 ```
 
 
