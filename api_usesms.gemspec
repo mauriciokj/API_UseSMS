@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'API_UsesSMS'
-  s.version     = '1.0.2'
-  s.date        = '2010-10-01'
+  s.version     = '1.1.0'
+  s.date        = '2010-10-02'
   s.summary     = "Gem to use the SMS sender UseSMS API"
   s.description = "Gem to use the SMS sender UseSMS API"
   s.authors     = ["Mauricio Krzesinski Junior"]
@@ -11,3 +11,6 @@ Gem::Specification.new do |s|
     'http://rubygems.org/gems/usesms'
   s.license       = 'AfterSixApps'
 end
+# def copy_locale
+#   copy_file "../../../config/locales/en.yml", "config/locales/devise.en.yml"
+# end
