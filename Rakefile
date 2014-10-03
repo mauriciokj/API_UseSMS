@@ -6,3 +6,6 @@ namespace :usesms do
     FileUtils.cp_r source, target
   end
 end
+
+require 'bundler'
+Bundler::GemHelper.install_tasks
