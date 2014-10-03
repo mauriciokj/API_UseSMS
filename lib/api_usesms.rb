@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 module UseSms
+  require 'usesms/config' if defined?(Rails)
 	class << self
     attr_accessor :user
     attr_accessor :password
