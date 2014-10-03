@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Gem to use the SMS sender UseSMS API"
   s.authors     = ["Mauricio Krzesinski Junior"]
   s.email       = 'mauriciokj@gmail.com'
-  s.files       = Dir['Rakefile','config/**/*','lib/**/*']
+  s.files       = Dir['config/**/*','lib/**/*']
   s.homepage    =
     'http://rubygems.org/gems/usesms'
   s.license       = 'AfterSixApps'
