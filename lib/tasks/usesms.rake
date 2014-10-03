@@ -3,7 +3,7 @@ namespace :usesms do
   task :install do
   	puts "Copiando arquivo....."
   	from = File.join(File.expand_path(File.dirname(__FILE__)),'../../', 'config/', 'initialize/', 'API_UseSMS.rb')
-  	to = File.join(Dir.pwd,'../../', 'config/', 'initialize/', 'API_UseSMS.rb')
+  	to = File.join(Dir.pwd, 'config/', 'initialize/', 'API_UseSMS.rb')
 
   	puts "from #{from}"
   	puts "to #{to}"
