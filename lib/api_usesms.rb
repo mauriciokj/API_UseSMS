@@ -20,7 +20,7 @@ module UseSms
     else
       URI("http://usesms.net.br/api/autenticar?login=#{UseSms.user}&senha=#{UseSms.password}")
     end
-  	UseSms.id_session = Net::HTTP.get(uri)
+  	@@id_session = Net::HTTP.get(uri)
   end
 
   def self.ping(rest = true)
