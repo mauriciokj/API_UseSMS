@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.files       = Dir['config/**/*','lib/**/*']
   s.homepage    =
     'http://rubygems.org/gems/usesms'
-  s.license       = 'AfterSixApps'
+  s.license       = "MIT"
 end
