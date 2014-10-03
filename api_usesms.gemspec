@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'API_UseSMS'
-  s.version     = '1.1.8'
+  s.version     = '1.1.9'
   s.date        = '2010-10-02'
   s.summary     = "Gem to use the SMS sender UseSMS API"
   s.description = "Gem to use the SMS sender UseSMS API"

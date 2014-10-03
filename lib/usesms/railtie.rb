@@ -1,4 +1,4 @@
-require 'usesms'
+require 'api_usesms'
 require 'rails'
 module UseSms
   class Railtie < Rails::Railtie
