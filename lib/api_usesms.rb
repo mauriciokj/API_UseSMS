@@ -31,6 +31,17 @@ module UseSms
     Net::HTTP.get(uri)
   end
 
+  def self.envia_sms(phone,msg,token = nil,rest = false)
+    token ||= UseSms.id_session || self.autenticar
+    msg = URI.escape(msg)   
+    uri = if rest     
+      URI("http://usesms.net.br/api/envia_sms/#{token}/#{phone}/#{msg}")
+    else
+      URI("http://usesms.net.br/api/envia_sms?id_sessao=#{token}&telefone=#{phone}&mensagem=#{msg}")
+    end
+    Net::HTTP.get(uri) 
+  end
+
   def self.status(id_mensagem, rest = true)
     id_mensagem = URI.escape(id_mensagem)
   	uri =  if rest 
@@ -40,17 +51,5 @@ module UseSms
     end
   	Net::HTTP.get(uri)  	
   end
-
-
-  def self.envia_sms(phone,msg,token = nil,rest = false)
-		token ||= UseSms.id_session || self.autenticar
-		msg = URI.escape(msg)		
-		uri = if rest			
-			URI("http://usesms.net.br/api/envia_sms/#{token}/#{phone}/#{msg}")
-		else
-			URI("http://usesms.net.br/api/envia_sms?id_sessao=#{token}&telefone=#{phone}&mensagem=#{msg}")
-		end
-		Net::HTTP.get(uri) 
-	end
 
 end
