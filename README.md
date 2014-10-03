@@ -19,6 +19,17 @@ bundle install
 ```console
 rake usesms:install
 ``` -->
+## Arquivo de configuração
+
+O arquivo de configuração deve seguir o seguinte modelo e por padrão em aplicações Rails fica em config/initialize/API_UseSMS.rb:
+
+```ruby
+require 'API_UseSMS'
+UseSms.setup do |config| 
+	c.user = 'usuario'
+	c.password = 'senha'
+end	
+```
 
 ## Comandos Básicos
 Para enviar uma mensagem, o sistema exige autenticação com um usuário ou sessão válidos. 
@@ -26,8 +37,27 @@ Para enviar uma mensagem, o sistema exige autenticação com um usuário ou sess
 ```ruby
 UseSms.autenticar
 ```
+O ID da sessão ficara armazenado em:
 
+```ruby
+UseSms.id_session
+```
 
+Para manter a sessão ativa, você pdoe utilizar o:
 
+```ruby
+UseSms.ping
+```
+
+Para enviar o SMS o comando é envia_sms que retorna o id da mensagem:
+
+```ruby
+UseSms.envia_sms(telefone,mensagem)
+```
+
+Para verificar o status da mensagem:
+```ruby
+UseSms.status(id_mensagem)
+```
 
 
