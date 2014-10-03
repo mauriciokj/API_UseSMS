@@ -1,7 +1,7 @@
 require 'usesms'
 require 'rails'
 module UseSms
-  class config < Rails::Railtie
+  class Railtie < Rails::Railtie
     railtie_name :usesms
 
     rake_tasks do
