@@ -14,12 +14,13 @@ Rode o comando bundle para instalar.
 bundle install
 ```
 
-<!-- Depois de instalar, rode o comando para criar o arquivo de configuração onde será adicionado o usuario e a senha.
+## Arquivo de configuração
+
+Depois de instalar, rode o comando para criar o arquivo de configuração onde será adicionado o usuario e a senha.
 
 ```console
-rake usesms:install
-``` -->
-## Arquivo de configuração
+bundle exec rake usesms:install
+```
 
 O arquivo de configuração deve seguir o seguinte modelo e por padrão em aplicações Rails fica em config/initialize/API_UseSMS.rb:
 
