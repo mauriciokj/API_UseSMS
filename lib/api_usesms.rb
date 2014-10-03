@@ -32,10 +32,11 @@ module UseSms
   end
 
   def self.status(id_mensagem, rest = true)
+    id_mensagem = URI.escape(id_mensagem)
   	uri =  if rest 
-      URI("http:://usesms.net.br/api/status/#{UseSms.id_session}/#{id_mensagem}")
+      URI("http://usesms.net.br/api/status/#{UseSms.id_session}/#{id_mensagem}")
     else
-      URI("http:://usesms.net.br/api/status?id_sessao=#{UseSms.id_session}&id_mensagem=#{id_mensagem}")
+      URI("http://usesms.net.br/api/status?id_sessao=#{UseSms.id_session}&id_mensagem=#{id_mensagem}")
     end
   	Net::HTTP.get(uri)  	
   end
